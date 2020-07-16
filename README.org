@@ -1,0 +1,15 @@
+#+AUTHOR: Reese De Wind
+#+TITLE: Caveman2 Project
+
+* Usage
+Run with SBCL, slime, or preferred compiler
+#+BEGIN_SRC common-lisp
+(push "~/Projects/caveman2/" asdf:*central-registry*) ;;put your path to project as the second parameter
+(ql:quickload :caveman2_project)
+(caveman2\_project:start :port 5000)
+#+END_SRC
+
+* Required Packages
+[[http://www.sbcl.org/getting.html][SBCL]] (or from package manager)
+[[https://www.quicklisp.org/beta/][Quicklisp with vecto]]
+
