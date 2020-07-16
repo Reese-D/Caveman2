@@ -24,7 +24,7 @@
 ;; Routing rules
 
 (defroute "/" ()
-  (render #P"index.html"))
+  (render #P"test.html"))
 
 (defroute "/display_url/*"  (&key splat)
   (format nil "this was in the URL: ~a" (car splat)))
