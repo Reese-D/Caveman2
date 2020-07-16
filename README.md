@@ -1,12 +1,12 @@
 
 # Table of Contents
 
-1.  [Usage](#orgc6d3fa8)
-2.  [Required Packages](#orgee85ec3)
+1.  [Usage](#org8bc42bf)
+2.  [Required Packages](#org45fc8a4)
 
 
 
-<a id="orgc6d3fa8"></a>
+<a id="org8bc42bf"></a>
 
 # Usage
 
@@ -14,10 +14,10 @@ Run with SBCL, slime, or preferred compiler
 
     (push "~/Projects/caveman2/" asdf:*central-registry*) ;;put your path to project as the second parameter
     (ql:quickload :caveman2_project)
-    (caveman2\_project:start :port 5000)
+    (caveman2_project:start :port 5000)
 
 
-<a id="orgee85ec3"></a>
+<a id="org45fc8a4"></a>
 
 # Required Packages
 
