@@ -1,0 +1,13 @@
+#!/usr/bin/sbcl --script
+(load "~/quicklisp/setup.lisp")
+
+
+;;(ql:quickload :caveman2_project)
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (progn
+    (require "asdf")      
+    (push "~/Caveman2/" asdf:*central-registry*)  
+    (ql:quickload :caveman2_project)))
+
+  
+(sb-ext:save-lisp-and-die "run_server" :executable t :toplevel #'caveman2_project:main :purify t)

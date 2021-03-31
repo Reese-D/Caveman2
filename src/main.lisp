@@ -6,7 +6,8 @@
   (:import-from :clack
                 :clackup)
   (:export :start
-           :stop))
+   :stop
+           :main))
 (in-package :caveman2_project)
 
 (defvar *appfile-path*
@@ -23,6 +24,18 @@
         (stop))))
   (setf *handler*
         (apply #'clackup *appfile-path* args)))
+
+
+(defun main ()
+  (start :port 9002)
+  (handler-case (bt:join-thread (find-if (lambda (th)
+                                             (search "hunchentoot" (bt:thread-name th)))
+                                           (bt:all-threads)))))
+
+(defun run_alive (&rest args)
+  (progn
+    (apply #'clackup *appfile-path* args)))
+
 
 (defun stop ()
   (prog1
