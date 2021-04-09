@@ -1,8 +1,10 @@
 FROM ubuntu:20.04
 
-COPY . ~/Caveman2
-WORKDIR ~/Caveman2
+COPY . /Caveman2
+WORKDIR /Caveman2
 EXPOSE 9002
+
+RUN ls -la /Caveman2
 
 RUN apt update
 RUN apt -y --no-install-recommends install sbcl

@@ -1,12 +1,12 @@
 #!/usr/bin/sbcl --script
 (load "~/quicklisp/setup.lisp")
 
+(require "asdf")
+(ql:quickload :clack)
 
-;;(ql:quickload :caveman2_project)
 (eval-when (:compile-toplevel :load-toplevel :execute)
   (progn
-    (require "asdf")      
-    (push "~/Caveman2/" asdf:*central-registry*)  
+    (push "/Caveman2/" asdf:*central-registry*)  
     (ql:quickload :caveman2_project)))
 
   

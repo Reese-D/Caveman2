@@ -1,6 +1,6 @@
 #!/usr/bin/sbcl --script
 (load "./quicklisp.lisp")
-;;change the definition of do not prompt so we don't have to press enter
+
 (quicklisp-quickstart:install)
 (ql::without-prompting (ql:system-apropos "vecto"))
 (ql::without-prompting (ql:quickload "vecto"))
